@@ -1,2 +1,2 @@
 # mu
-Legal entity container Web App to enable One the centre of all activities and relationships toward what count.
+Legal entity Command Centre and Personal Assistant to enable One the centre of all activities and relationships toward what count.
