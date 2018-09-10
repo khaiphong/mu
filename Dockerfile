@@ -21,9 +21,9 @@ EXPOSE 8080
 
 # package the image in alpine for image built and serviced from personadb
 #FROM 1.11.0-alpine
-#COPY --from=build-env /go/src/github.com/khaiphong/personadb \
-#                      /go/src/github.com/khaiphong/personadb
+#COPY --from=build-env /go/src/github.com/khaiphong/mu \
+#                      /go/src/github.com/khaiphong/mu
 
-#RUN chown nobody:nogroup /go/src/github.com/khaiphong/personadb
+#RUN chown nobody:nogroup /go/src/github.com/khaiphong/mu
 #USER nobody
 
