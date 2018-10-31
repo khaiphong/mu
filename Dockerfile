@@ -14,7 +14,7 @@ RUN go build -o main .
 VOLUME /khaiphong/personadb
 
 # run personadb - a REST API - when the container launches
-CMD ["/go/src/github.com/khaiphong/mu/main"]
+CMD ["/go/src/github.com/khaiphong/mu/main", "start" ]
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
