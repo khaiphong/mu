@@ -227,6 +227,6 @@ func main() {
     router.HandleFunc("/{entityId}/{bucketId}/{topicId}/B-{bucketId}", CreateTopicBucket).Methods("POST")
     router.HandleFunc("/{entityId}/{bucketId}/{topicId}/B-{bucketId}", DeleteTopicBucket).Methods("DELETE")
 
-    log.Fatal(http.ListenAndServe(":8080", router))
+    log.Fatal(http.ListenAndServe(":8081", router))
 }
 
