@@ -1,29 +1,27 @@
-# start an official go which installs golang and sets GOPATH
-FROM golang:1.11 AS build-env
-# copy the ca-certificates.crt from our machine into our container
+# node.js for PWA
+FROM node:10.13.0 AS node-env
 ADD ca-certificates.crt /etc/ssl/certs/
 
-COPY . /go/src/github.com/khaiphong/mu
-WORKDIR /go/src/github.com/khaiphong/mu
+COPY . /node/src/github.com/khaiphong/mu
+WORKDIR /node/src/github.com/khaiphong/mu
 
-# get all dependencies and compile go program
-RUN go get -d -v ./...
-RUN go build -o main .
-
-# the mount point for different containers in the same machine
+# the mount point and activate personadb in the same machine
 VOLUME /khaiphong/personadb
 
-# run personadb - a REST API - when the container launches
-CMD ["/go/src/github.com/khaiphong/mu/main", "start" ]
+RUN npm install
+# If you are building your code for production
+# RUN npm install --only=production
 
-# Make port 8080 available to the world outside this container
+# Make 8080 available to outside this container for Node
 EXPOSE 8080
+
+# run personadb - a REST API - when the container launches
+CMD [ "npm", "start" ]
 
 # package the image in alpine for image built and serviced from personadb
 #FROM 1.11.0-alpine
-#COPY --from=build-env /go/src/github.com/khaiphong/mu \
-#                      /go/src/github.com/khaiphong/mu
+#COPY --from=node-env /node/src/github.com/khaiphong/mu \
+#                      /node/src/github.com/khaiphong/mu
 
 #RUN chown nobody:nogroup /go/src/github.com/khaiphong/mu
 #USER nobody
-
