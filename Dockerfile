@@ -8,12 +8,12 @@ WORKDIR /node/src/github.com/khaiphong/mu
 # the mount point and activate personadb in the same machine
 VOLUME /khaiphong/personadb
 
-RUN npm install
+# RUN npm install in working directory first
 # If you are building your code for production
 # RUN npm install --only=production
 
-# Make 8080 available to outside this container for Node
-EXPOSE 8080
+# Make 8081 available to outside this container for Node
+EXPOSE 8081
 
 # run personadb - a REST API - when the container launches
 CMD [ "npm", "start" ]
