@@ -6,7 +6,7 @@ COPY . /node/src/github.com/khaiphong/mu
 WORKDIR /node/src/github.com/khaiphong/mu
 
 # the mount point and activate personadb in the same machine
-VOLUME /khaiphong/personadb
+# VOLUME /khaiphong/personadb
 
 # RUN npm install in working directory first
 # If you are building your code for production
