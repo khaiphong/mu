@@ -9,9 +9,9 @@ services:
       - "8081:8081"
     links:
       - personadb
-  personadb:
+  mongo:
     container_name: personadb
-    image: personadb
+    image: mongo
     volumes:
       - ./khaiphong:/khaiphong/personadb
     ports:

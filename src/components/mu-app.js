@@ -1,11 +1,18 @@
 /**
-@license
-Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+@license KhaiPhong
+
+<app-header>
+  <app-toolbar> on-demand messaging board for both PersonaAI and the app
+  <app-drawer> has directory services of Mu major componentss: EIP, Chat,
+     Service, HR, GSLP, Link, Awakening; its serviceworker serves
+     push-notifications from user PersonaAI
+
+<app-nav> is a container of DNS link having its own push-notifications
+<a href="https://MyBook.mydns.com/">Book</a> connecting via Om cloud streaming
+to inject on-demand activities and relationships to different major sections of
+Mu components. Each section is the functional type of the Mu component. The
+microservice can use standard browser process of serviceworker and/or
+<app-toolbar> messaging board.
 */
 
 import { LitElement, html } from '@polymer/lit-element';
@@ -31,7 +38,7 @@ import '@polymer/app-layout/app-drawer/app-drawer.js';
 import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-scroll-effects/effects/waterfall.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
-import { menuIcon } from './my-icons.js';
+import { menuIcon } from './mu-icons.js';
 import './snack-bar.js';
 
 class MuApp extends connect(store)(LitElement) {
@@ -188,10 +195,13 @@ class MuApp extends connect(store)(LitElement) {
 
       <!-- This gets hidden on a small screen-->
       <nav class="toolbar-list">
-        <a ?selected="${this._page === 'view1'}" href="/view1">View One</a>
-        <a ?selected="${this._page === 'view2'}" href="/view2">View Two</a>
-        <a ?selected="${this._page === 'view3'}" href="/view3">View Three</a>
-        <a ?selected="${this._page === 'view4'}" href="/view4">New View!</a>
+        <a ?selected="${this._page === 'eip'}" href="/eip">EIP</a>
+        <a ?selected="${this._page === 'chat'}" href="/chat">Chat</a>
+        <a ?selected="${this._page === 'service'}" href="/service">Serice</a>
+        <a ?selected="${this._page === 'hr'}" href="/hr">HR</a>
+        <a ?selected="${this._page === 'gslp'}" href="/gslp">GSLP</a>
+        <a ?selected="${this._page === 'link'}" href="/link">Link</a>
+        <a ?selected="${this._page === 'awakening'}" href="/awakening">Awakening</a>
       </nav>
     </app-header>
 
@@ -199,24 +209,31 @@ class MuApp extends connect(store)(LitElement) {
     <app-drawer .opened="${this._drawerOpened}"
         @opened-changed="${this._drawerOpenedChanged}">
       <nav class="drawer-list">
-        <a ?selected="${this._page === 'view1'}" href="/view1">View One</a>
-        <a ?selected="${this._page === 'view2'}" href="/view2">View Two</a>
-        <a ?selected="${this._page === 'view3'}" href="/view3">View Three</a>
-        <a ?selected="${this._page === 'view4'}" href="/view4">New View!</a>
+        <a ?selected="${this._page === 'eip'}" href="/eip">EIP</a>
+        <a ?selected="${this._page === 'chat'}" href="/chat">Chat</a>
+        <a ?selected="${this._page === 'service'}" href="/service">Service</a>
+        <a ?selected="${this._page === 'hr'}" href="/hr">HR</a>
+        <a ?selected="${this._page === 'gslp'}" href="/gslp">GSLP</a>
+        <a ?selected="${this._page === 'link'}" href="/link">Link</a>
+        <a ?selected="${this._page === 'awakening'}" href="/awakening">Awakening</a>
       </nav>
     </app-drawer>
 
     <!-- Main content -->
     <main role="main" class="main-content">
-      <my-view1 class="page" ?active="${this._page === 'view1'}"></my-view1>
-      <my-view2 class="page" ?active="${this._page === 'view2'}"></my-view2>
-      <my-view3 class="page" ?active="${this._page === 'view3'}"></my-view3>
-      <my-view4 class="page" ?active="${this._page === 'view4'}"></my-view4>
-      <my-view404 class="page" ?active="${this._page === 'view404'}"></my-view404>
+      <mu-eip class="page" ?active="${this._page === 'eip'}"></mu-eip>
+      <mu-chat class="page" ?active="${this._page === 'chat'}"></mu-chat>
+      <mu-service class="page" ?active="${this._page === 'service'}"></mu-service>
+      <mu-hr class="page" ?active="${this._page === 'hr'}"></mu-hr>
+      <mu-gslp class="page" ?active="${this._page === 'gslp'}"></mu-gslp>
+      <mu-link class="page" ?active="${this._page === 'link'}"></mu-link>
+      <mu-awakening class="page" ?active="${this._page === 'awakening'}"></mu-awakening>
+
+      <mu-view404 class="page" ?active="${this._page === 'view404'}"></mu-view404>
     </main>
 
     <footer>
-      <p>Made with &hearts; by the Polymer team.</p>
+      <p>Command Centre of all activities and relationships.</p>
     </footer>
 
     <snack-bar ?active="${this._snackbarOpened}">

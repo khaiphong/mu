@@ -1,11 +1,5 @@
 /**
-@license
-Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+@license KhaiPhong
 */
 
 export const UPDATE_PAGE = 'UPDATE_PAGE';
@@ -16,7 +10,7 @@ export const CLOSE_SNACKBAR = 'CLOSE_SNACKBAR';
 
 export const navigate = (path) => (dispatch) => {
   // Extract the page name from path.
-  const page = path === '/' ? 'view1' : path.slice(1);
+  const page = path === '/' ? 'eip' : path.slice(1);
 
   // Any other info you might want to extract from the path (like page type),
   // you can do here
@@ -28,24 +22,35 @@ export const navigate = (path) => (dispatch) => {
 
 const loadPage = (page) => (dispatch) => {
   switch(page) {
-    case 'view1':
-      import('../components/my-view1.js').then((module) => {
+    case 'eip':
+      import('../components/mu-eip.js').then((module) => {
         // Put code in here that you want to run every time when
         // navigating to view1 after my-view1.js is loaded.
       });
       break;
-    case 'view2':
-      import('../components/my-view2.js');
+
+    case 'chat':
+      import('../components/mu-chat.js');
       break;
-    case 'view3':
-      import('../components/my-view3.js');
+    case 'service':
+      import('../components/mu-service.js');
       break;
-    case 'view4':
-      import('../components/my-view4.js');
+    case 'hr':
+      import('../components/mu-hr.js');
       break;
+    case 'gslp':
+      import('../components/mu-gslp.js');
+      break;
+    case 'link':
+      import('../components/mu-link.js');
+      break;
+    case 'awakening':
+      import('../components/mu-awakening.js');
+      break;
+
     default:
       page = 'view404';
-      import('../components/my-view404.js');
+      import('../components/mu-view404.js');
   }
 
   dispatch(updatePage(page));

@@ -2,10 +2,10 @@
   "name": "mu",
   "version": "0.9.0",
   "contributors": [
-    "The Polymer Authors"
+    "Duong BaTien"
   ],
   "license": "BSD-3-Clause",
-  "repository": "Polymer/pwa-starter-kit",
+  "repository": "https://github.com/khaiphong/mu",
   "scripts": {
     "start": "polymer serve",
     "build": "npm run build:prpl-server && npm run build:static",

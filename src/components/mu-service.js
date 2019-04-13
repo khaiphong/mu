@@ -1,11 +1,14 @@
 /**
-@license
-Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+@license KhaiPhong
+
+DNS link <a href="https://MyBook.mydns.com/">Book</a> connects microservice in
+the cloud via streaming to inject on-demand activities and relationships to
+Mu <app-nav> container, having serviceworker for its specific notifications
+that ride on available facilities of the Mu <app-toolbar> and/or browser
+defaults.
+
+Each section is the functional type of the Mu component, whose registered
+microservices push notification can ride on public facilities of PersonaAI.
 */
 
 import { html } from '@polymer/lit-element';
@@ -30,7 +33,7 @@ import './counter-element.js';
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
 
-class MyView2 extends connect(store)(PageViewElement) {
+class MuService extends connect(store)(PageViewElement) {
   render() {
     return html`
       ${SharedStyles}
@@ -53,6 +56,12 @@ class MyView2 extends connect(store)(PageViewElement) {
           </counter-element>
         </p>
       </section>
+
+      <section>
+        <h2>Search</h2>
+        <p>Looking for a service.</p>
+      </section>
+
     `;
   }
 
@@ -77,4 +86,4 @@ class MyView2 extends connect(store)(PageViewElement) {
   }
 }
 
-window.customElements.define('my-view2', MyView2);
+window.customElements.define('mu-service', MuService);
