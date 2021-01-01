@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <div className="navbar_logo"><a href="/">Mu</a></div>
+        <div className="navbar_logo"><a href="/">PersonaDB</a></div>
           <div className="spacer" />
           <div className="navbar_navigation-items">
             <ul>
