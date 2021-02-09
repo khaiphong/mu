@@ -23,7 +23,7 @@ const Navbar = () => {
           <div className="navbar_navigation-items">
             <ul>
               <li><a href="/">
-                Alert links will not be more than 70 characters
+                Alert links will not be more than 50 characters
               </a></li>
             </ul>
           </div>
