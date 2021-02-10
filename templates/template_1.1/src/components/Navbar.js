@@ -10,12 +10,12 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <div className="navbar_logo"><a href="/">PersonaDB</a></div>
+        <div className="navbar_logo"><a href="/">Template_1.1</a></div>
           <div className="spacer" />
           <div className="navbar_navigation-items">
             <ul>
               <li><a href="/">
-                Alert from injected service will not be more than 70 characters
+                Alert less than 40 characters
               </a></li>
             </ul>
           </div>
@@ -33,7 +33,7 @@ const Navbar = () => {
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>
               <Link to="#" className="menu-bars">
-                <button  >
+                <button>
                   X
                 </button>
               </Link>

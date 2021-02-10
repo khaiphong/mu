@@ -18,12 +18,12 @@ const Navbar = () => {
           </button>
         </Link>
 
-        <div className="navbar_logo"><a href="/">Mu</a></div>
+        <div className="navbar_logo"><a href="/">Template_1</a></div>
           <div className="spacer" />
           <div className="navbar_navigation-items">
             <ul>
               <li><a href="/">
-                Alert links will not be more than 70 characters
+                Alert links will not be more than 50 characters
               </a></li>
             </ul>
           </div>
