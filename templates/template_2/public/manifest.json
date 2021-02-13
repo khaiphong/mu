@@ -1,6 +1,6 @@
 {
-  "short_name": "Template_2",
-  "name": "Private Universal Database",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",

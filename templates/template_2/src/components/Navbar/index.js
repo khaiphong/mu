@@ -1,46 +1,33 @@
-import React from 'react'
-import {
-  Nav,
-  NavLink,
-  Bars,
-  NavMenu,
-  NavBtn,
-  NavBtnLink
+import React from 'react';
+import { 
+  Nav, 
+  NavLink, 
+  NavIcon, 
+  Bars, 
+  MenuBars,
+  ToggleButton,
+  ToggleLine 
 } from './NavbarElements';
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <>
       <Nav>
-        <NavLink to='/'>
-          PersonaDB
-        </NavLink>
-        
-        <NavMenu>
-          <NavLink to='/about' activeStyle>
-            About
-          </NavLink>
-          <NavLink to='/services' activeStyle>
-            Services
-          </NavLink>
-          <NavLink to='/contact-us' activeStyle>
-            Contact Us
-          </NavLink>
-          <NavLink to='/sign-up' activeStyle>
-            Sign Up
-          </NavLink>
-          {/* Second Nav */}
-          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
-        </NavMenu>
-        
-        <NavBtn>
-          <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-        </NavBtn>
-        
-        <Bars />
+        <NavLink to='/'>Pizza</NavLink>
+        <NavIcon onClick={toggle}>
+          <p>Menu</p>
+          <MenuBars>
+            <ToggleButton >
+              <ToggleLine />
+              <ToggleLine />
+              <ToggleLine />
+            </ToggleButton>
+          </MenuBars>
+        </NavIcon>
+
       </Nav>
     </>
-  );
-};
+  )
+}
 
 export default Navbar;

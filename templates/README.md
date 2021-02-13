@@ -10,9 +10,4 @@ The ecosystem consists of PaaS (Platform as a Service) where you can ride on the
 
 Other templates are designs, donated by designers knowing ReactJS for FREE usages to introduce their services.
 
-"<b>Template_2</b>"
-
-"<b>Template_3</b>"
-
-"<b>Template_4</b>"
 
