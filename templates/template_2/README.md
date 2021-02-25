@@ -1,4 +1,4 @@
-"<b>Template_2</b>" - a variety of microservices in injection to the requested service from generic template_1.1
+"<b>Template_2</b>" - a variety of microservices to inject into the requested service from generic template_1.1
 
 It is a pizza Ecommerce where we use bare-metal MenuBars (min 50:00): 
   https://www.youtube.com/watch?v=GlROncAX4XI

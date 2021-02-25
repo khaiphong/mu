@@ -13,7 +13,7 @@ const Sidebar = ({ isOpen, toggle }) => {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
-        <CloseIcon />
+        <CloseIcon>X</CloseIcon>
       </Icon>
       <SidebarMenu>
         <SidebarLink to='/'>Pizzas</SidebarLink>
