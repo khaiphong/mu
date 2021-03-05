@@ -3,31 +3,41 @@ export const SidebarData = [
   {
     title: 'Activities',
     path: '/',
-    icon: '',
-    cName: 'nav-text'
+    icon: ''
   },
   {
     title: 'Relationships',
     path: '/relationships',
-    icon: '',
-    cName: 'nav-text'
+    icon: ''
   },
   {
     title: 'Places',
     path: '/places',
-    icon: '',
-    cName: 'nav-text'
+    icon: ''
   },
   {
     title: 'Mindfulness',
     path: '/mindfulness',
-    icon: '',
-    cName: 'nav-text'
+    icon: ''
   },
   {
-    title: 'PrajnaTIP',
-    path: '/prajnaTIP',
+    title: 'EIP',
+    path: '/eip',
     icon: '',
-    cName: 'nav-text'
+    iconClosed: '',
+    iconOpened: '',
+
+    subNav: [
+      {
+        title: 'Dashboard',
+        path: '/eip/dashboard',
+        icon: ''
+      },
+      {
+        title: 'Upgrade',
+        path: '/eip/upgrade',
+        icon: ''
+      }
+    ]
   }
 ];
