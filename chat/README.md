@@ -1,0 +1,3 @@
+# mu_chat
+
+an AI chat built from open-source <a href="https://github.com/xai-org/grok-1" target="_blank">xAI grok-1</a>, augmented with selected open-source AI projects on top of the persona custom <a href="https://github.com/khaiphong/kp_platform/tree/main/kp_ai" target="_blank">kp_ai</a>, knowledge <a href="https://github.com/khaiphong/kp_platform/tree/main/kp_graph" target="_blank">kp_graph</a> and user's Activities, Relationships and Places accumulated in <a href="https://github.com/khaiphong/kp_platform/" target="_blank">kp_platform</a>. It is designed for assisting <b>smart-contract programming, debugging, market analysis, guidance, trading, etc, in always-on computing kp_platform</b>.
